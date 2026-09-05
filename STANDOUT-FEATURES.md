@@ -1,28 +1,21 @@
-# What stands out vs Gazi (and typical portfolios)
+# Portfolio standouts (research-backed)
 
-Inspiration only: [gazijarin.com](https://www.gazijarin.com/) - craft categories, personal art, playful polish.
+## Removed (redundant)
+- Systems Pulse board - duplicated project categories
+- Interactive terminal - novelty without hiring value
 
-## Already different (Builders' Wall)
-Gazi shows **her own art**. This site shows a **collaborative signal wall**:
-- Exhibition-first postcard gallery (seed art so it never looks empty)
-- Intent badges: Hiring / Collaborating / Cheering / Curious
-- Filter by signal
-- Large drawing studio only after "Open drawing studio"
+## Kept / upgraded
+### Builders' Wall
+Collaborative guestbook with signal tags - not a personal art clone of Gazi.
 
-## Added this round (research-backed standouts)
-From terminal portfolios, recruiter-focused UX, and live-status ideas ([DEV terminal portfolios](https://dev.to/el1fe/how-i-built-a-portfolio-that-makes-recruiters-actually-stop-and-look-1e3n), CLI portfolio patterns):
+### Recruiter Mode (upgraded)
+Built for the hiring scan (role + stack + proof + contact in ~60s):
+- Clear positioning statement
+- Open-to roles
+- Availability / timezone / remote readiness (Africa → international)
+- Stack keywords recruiters and ATS pattern-match
+- Featured work as Problem → Outcome (not feature lists)
+- Working signals + credentials snapshot
+- Sticky Email / LinkedIn / GitHub
 
-1. **Recruiter Mode** (`R` key or header button)
-   - 30-second pitch, best-fit roles, top 3 proof links, stack focus, email CTA
-   - Built for LinkedIn traffic that will not scroll the whole page
-
-2. **Interactive Terminal**
-   - Commands: help, whoami, stack, projects, systems, experience, contact, hire, cowsay
-   - Maps to real content (not a fake skin)
-
-3. **Systems Pulse**
-   - Live-style board for the six engineering products with ports + demoable status
-   - Proves breadth in one scan
-
-## LinkedIn one-liner
-"I shipped a portfolio with Recruiter Mode, a CLI over my work, a systems pulse board, and a builders' wall where visitors leave sketches tagged Hiring / Collaborating / Cheering / Curious - not a Gazi clone."
+Research basis: recruiter 6-second scan patterns, HM portfolio reviews (scannability + impact), remote hiring advice for African engineers (proof of reliability + async/timezone clarity).
