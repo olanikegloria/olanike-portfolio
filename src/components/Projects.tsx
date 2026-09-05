@@ -1,18 +1,28 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { getProjectsByCategory, type ProjectCategory } from "@/data/projects";
 
-const GROUPS: { key: ProjectCategory; label: string }[] = [
-  { key: "ai", label: "AI & Automation" },
-  { key: "devops", label: "DevOps & Platform (with AI)" },
-  { key: "software", label: "Frontend & Full-Stack" },
+const GROUPS: { key: ProjectCategory; label: string; kicker: string }[] = [
+  { key: "ai", label: "AI & Automation", kicker: "/ ai" },
+  { key: "devops", label: "DevOps & Platform", kicker: "/ devops" },
+  { key: "software", label: "Frontend & Full-Stack", kicker: "/ software" },
 ];
 
 export function Projects() {
+  const [active, setActive] = useState<ProjectCategory | "all">("all");
   let startIndex = 0;
+
+  const counts = useMemo(
+    () =>
+      Object.fromEntries(
+        GROUPS.map((g) => [g.key, getProjectsByCategory(g.key).length]),
+      ) as Record<ProjectCategory, number>,
+    [],
+  );
 
   return (
     <section
@@ -25,18 +35,41 @@ export function Projects() {
           Projects
         </h2>
         <span className="accent-line" />
+        <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted">
+          Grouped by craft. One featured piece per category by default - open a
+          category or tap See more to browse the rest.
+        </p>
+
+        <div className="mt-10 flex flex-wrap gap-2">
+          <Chip
+            active={active === "all"}
+            onClick={() => setActive("all")}
+            label="All categories"
+          />
+          {GROUPS.map((g) => (
+            <Chip
+              key={g.key}
+              active={active === g.key}
+              onClick={() => setActive(g.key)}
+              label={`${g.label} (${counts[g.key]})`}
+            />
+          ))}
+        </div>
 
         {GROUPS.map((group) => {
           const projects = getProjectsByCategory(group.key);
           const groupStart = startIndex;
           startIndex += projects.length;
-          if (projects.length === 0) return null;
+          if (!projects.length) return null;
+          if (active !== "all" && active !== group.key) return null;
           return (
             <ProjectGroup
               key={group.key}
+              kicker={group.kicker}
               label={group.label}
               projects={projects}
               startIndex={groupStart}
+              forceExpanded={active === group.key}
             />
           );
         })}
@@ -45,23 +78,69 @@ export function Projects() {
   );
 }
 
+function Chip({
+  label,
+  active,
+  onClick,
+}: {
+  label: string;
+  active: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`rounded-full border px-3.5 py-1.5 text-xs transition-colors ${
+        active
+          ? "border-accent bg-accent/10 text-accent"
+          : "border-subtle text-muted hover:border-accent/40 hover:text-fg"
+      }`}
+    >
+      {label}
+    </button>
+  );
+}
+
 function ProjectGroup({
+  kicker,
   label,
   projects,
   startIndex,
+  forceExpanded,
 }: {
+  kicker: string;
   label: string;
   projects: ReturnType<typeof getProjectsByCategory>;
   startIndex: number;
+  forceExpanded: boolean;
 }) {
+  const [expanded, setExpanded] = useState(false);
+  const showAll = forceExpanded || expanded;
+  const visible = showAll ? projects : projects.slice(0, 1);
+  const hiddenCount = projects.length - 1;
+
   return (
-    <div className="mt-14">
-      <h3 className="text-sm font-medium text-muted">{label}</h3>
+    <div className="mt-16">
+      <div className="flex flex-wrap items-end justify-between gap-3 border-b border-subtle pb-4">
+        <div>
+          <p className="font-mono text-xs tracking-[0.18em] text-accent uppercase">
+            {kicker}
+          </p>
+          <h3 className="font-display mt-1 text-2xl text-fg md:text-3xl">
+            {label}
+          </h3>
+        </div>
+        <p className="text-xs text-muted-2">
+          {projects.length} project{projects.length === 1 ? "" : "s"}
+        </p>
+      </div>
+
       <div className="mt-8 space-y-12">
-        {projects.map((project, i) => (
+        {visible.map((project, i) => (
           <article
             key={project.slug}
-            className="group grid gap-6 border-t border-subtle pt-10 md:grid-cols-2 md:gap-10"
+            className="group grid gap-6 md:grid-cols-2 md:gap-10"
           >
             <Link
               href={`/projects/${project.slug}`}
@@ -81,14 +160,13 @@ function ProjectGroup({
                 {String(startIndex + i + 1).padStart(2, "0")} · {project.year}
               </span>
               <Link href={`/projects/${project.slug}`}>
-                <h3 className="font-display mt-2 text-2xl text-fg transition-colors group-hover:text-accent">
+                <h4 className="font-display mt-2 text-2xl text-fg transition-colors group-hover:text-accent">
                   {project.title}
-                </h3>
+                </h4>
               </Link>
               <p className="mt-3 text-sm leading-relaxed text-muted">
                 {project.shortDescription}
               </p>
-
               <div className="mt-4 flex flex-wrap gap-1.5">
                 {project.tools.slice(0, 6).map((tag) => (
                   <span
@@ -98,13 +176,7 @@ function ProjectGroup({
                     {tag}
                   </span>
                 ))}
-                {project.tools.length > 6 && (
-                  <span className="text-[10px] text-muted-2">
-                    +{project.tools.length - 6}
-                  </span>
-                )}
               </div>
-
               <Link
                 href={`/projects/${project.slug}`}
                 className="mt-5 inline-flex w-fit items-center gap-1.5 text-sm text-accent transition-all hover:gap-2.5"
@@ -116,6 +188,16 @@ function ProjectGroup({
           </article>
         ))}
       </div>
+
+      {!forceExpanded && hiddenCount > 0 && (
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          className="mt-8 inline-flex items-center gap-2 border border-subtle px-4 py-2.5 text-sm text-fg transition-colors hover:border-accent hover:text-accent"
+        >
+          {expanded ? "Show less" : `See ${hiddenCount} more in ${label}`}
+        </button>
+      )}
     </div>
   );
 }

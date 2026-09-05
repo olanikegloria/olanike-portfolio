@@ -20,10 +20,15 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: `${site.name} | AI Engineer & Software Engineer`,
   description: site.tagline,
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/apple-touch-icon.png" }],
+  },
   openGraph: {
     title: `${site.name} | AI Engineer & Software Engineer`,
     description: site.tagline,
     type: "website",
+    images: [{ url: "/profile.png" }],
   },
 };
 
