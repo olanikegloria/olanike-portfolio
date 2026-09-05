@@ -1,4 +1,4 @@
-export type ProjectCategory = "ai" | "software" | "infra";
+export type ProjectCategory = "ai" | "devops" | "software";
 
 export type ProjectLink = {
   label: string;
@@ -387,12 +387,12 @@ export const projects: Project[] = [
   {
     slug: "ci-intelligence-platform",
     title: "CI Intelligence Platform",
-    category: "infra",
+    category: "devops",
     year: "2026",
-    thumbnail: "/projects/kpi.png",
-    images: ["/projects/kpi.png"],
+    thumbnail: "/projects/devops/ci-intelligence.png",
+    images: ["/projects/devops/ci-intelligence.png"],
     shortDescription:
-      "Why did CI fail — and will it happen again? Failure causality, clustering, and flaky-test intelligence over GitHub Actions.",
+      "Why did CI fail - and will it happen again? Failure causality, clustering, and flaky-test intelligence over GitHub Actions.",
     overview:
       "A platform that ingests GitHub Actions runs and explains pipeline failures with deterministic analysis plus AI summaries.",
     problem:
@@ -417,14 +417,14 @@ export const projects: Project[] = [
   {
     slug: "dev-environment-platform",
     title: "One-Click Dev Environment Platform",
-    category: "infra",
+    category: "devops",
     year: "2026",
-    thumbnail: "/projects/starlink/cover.png",
-    images: ["/projects/starlink/cover.png"],
+    thumbnail: "/projects/devops/dev-environment.png",
+    images: ["/projects/devops/dev-environment.png"],
     shortDescription:
       "Analyse a repo, detect what it needs to run, and provision an isolated development environment.",
     overview:
-      "Developer onboarding platform focused on clone → configure → run — not production deploy.",
+      "Developer onboarding platform focused on clone → configure → run - not production deploy.",
     problem:
       "New engineers waste hours wiring env vars, databases, and sidecars even when Dockerfiles exist.",
     solution:
@@ -440,12 +440,12 @@ export const projects: Project[] = [
   {
     slug: "architecture-explorer",
     title: "Architecture Explorer",
-    category: "software",
+    category: "devops",
     year: "2026",
-    thumbnail: "/projects/academic-connect/cover.png",
-    images: ["/projects/academic-connect/cover.png"],
+    thumbnail: "/projects/devops/architecture-explorer.png",
+    images: ["/projects/devops/architecture-explorer.png"],
     shortDescription:
-      "Google Maps for a codebase — dependency graphs and grounded AI answers with file citations.",
+      "Google Maps for a codebase - dependency graphs and grounded AI answers with file citations.",
     overview:
       "Static analysis builds a map of the system; Q&A is constrained to the indexed graph.",
     problem:
@@ -463,14 +463,14 @@ export const projects: Project[] = [
   {
     slug: "production-replay-platform",
     title: "Production Replay Platform",
-    category: "infra",
+    category: "devops",
     year: "2026",
-    thumbnail: "/projects/invoice.png",
-    images: ["/projects/invoice.png"],
+    thumbnail: "/projects/devops/production-replay.png",
+    images: ["/projects/devops/production-replay.png"],
     shortDescription:
       "Capture redacted incident context and recreate safe local conditions to reproduce production failures.",
     overview:
-      "Incident packs with mandatory redaction and Dockerised replay scaffolds — not a full traffic mirror.",
+      "Incident packs with mandatory redaction and Dockerised replay scaffolds - not a full traffic mirror.",
     problem:
       "It worked locally. Production failures are hard to reproduce without leaking secrets.",
     solution:
@@ -486,14 +486,14 @@ export const projects: Project[] = [
   {
     slug: "ai-engineering-knowledge-platform",
     title: "AI Engineering Knowledge Platform",
-    category: "ai",
+    category: "devops",
     year: "2026",
-    thumbnail: "/projects/vapi.png",
-    images: ["/projects/vapi.png"],
+    thumbnail: "/projects/devops/ai-knowledge.png",
+    images: ["/projects/devops/ai-knowledge.png"],
     shortDescription:
       "Private engineering knowledge RAG with citations, confidence, and explicit no-answer behaviour.",
     overview:
-      "Ingest docs and repos, retrieve with embeddings, answer only with sources — plus an evaluation harness.",
+      "Ingest docs and repos, retrieve with embeddings, answer only with sources - plus an evaluation harness.",
     problem:
       "Engineering knowledge is scattered; chatbots invent procedures that were never written down.",
     solution:
@@ -509,10 +509,10 @@ export const projects: Project[] = [
   {
     slug: "api-change-intelligence",
     title: "API Change Intelligence",
-    category: "software",
+    category: "devops",
     year: "2026",
-    thumbnail: "/projects/lead-gen.png",
-    images: ["/projects/lead-gen.png"],
+    thumbnail: "/projects/devops/api-change.png",
+    images: ["/projects/devops/api-change.png"],
     shortDescription:
       "Detect breaking API changes and estimate which downstream consumers may break.",
     overview:

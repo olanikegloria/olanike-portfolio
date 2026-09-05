@@ -81,7 +81,7 @@ export async function POST(req: NextRequest) {
       ok: true,
       id: drawing.id,
       status: drawing.status,
-      message: "Thanks — your drawing was submitted for review.",
+      message: "Thanks - your drawing was submitted for review.",
     });
   } catch (error) {
     console.error(error);

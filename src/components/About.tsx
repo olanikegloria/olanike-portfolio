@@ -18,18 +18,15 @@ export function About() {
 
         <div className="mt-14 grid gap-12 lg:grid-cols-[240px_1fr] lg:gap-16">
           <div className="mx-auto w-full max-w-[240px] lg:mx-0">
-            <div className="relative aspect-[3/4] overflow-hidden">
-              <div className="absolute inset-0 bg-[#5a5a5a]" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#707070] via-[#585858] to-[#454545]" />
+            <div className="relative aspect-[3/4] overflow-hidden bg-surface">
               <Image
                 src="/profile.png"
                 alt="Olanike Olatunji"
                 fill
                 priority
-                className="relative object-cover object-[center_12%] saturate-[0.9]"
+                className="object-cover object-[center_18%]"
                 sizes="240px"
               />
-              <div className="pointer-events-none absolute inset-0 bg-[#555555]/20 mix-blend-multiply" />
             </div>
             <p className="mt-3 text-center text-xs text-muted lg:text-left">
               Lagos, Nigeria

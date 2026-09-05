@@ -33,7 +33,7 @@ export function Contact() {
           <div>
             <p className="section-label">07 / Contact</p>
             <h2 className="font-display mt-3 text-3xl text-fg md:text-[2.5rem]">
-              Building something serious — or hiring for it?
+              Building something serious - or hiring for it?
             </h2>
             <span className="accent-line" />
             <p className="mt-5 text-sm leading-relaxed text-muted">
@@ -109,7 +109,7 @@ export function Contact() {
                 required
                 rows={5}
                 className="input-field w-full resize-none px-3.5 py-3 text-sm"
-                placeholder="What are you working on — or hiring for?"
+                placeholder="What are you working on - or hiring for?"
               />
             </div>
             <button

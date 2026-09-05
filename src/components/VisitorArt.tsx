@@ -51,7 +51,7 @@ export function VisitorArt() {
         </h2>
         <span className="accent-line" />
         <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted">
-          Leave a small sketch on my portfolio — mouse or touch. Approved pieces
+          Leave a small sketch on my portfolio - mouse or touch. Approved pieces
           appear in the gallery below. Keep it kind; I moderate submissions.
         </p>
 
@@ -68,7 +68,7 @@ export function VisitorArt() {
               <p className="mt-8 text-sm text-muted">Loading gallery…</p>
             ) : drawings.length === 0 ? (
               <p className="mt-8 text-sm text-muted">
-                No approved drawings yet — yours could be the first.
+                No approved drawings yet - yours could be the first.
               </p>
             ) : (
               <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-1">

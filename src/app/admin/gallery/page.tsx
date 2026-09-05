@@ -121,7 +121,7 @@ export default function AdminGalleryPage() {
             </div>
             <div>
               <p className="text-sm text-fg">{d.visitorName}</p>
-              <p className="mt-1 text-xs text-muted">{d.message || "—"}</p>
+              <p className="mt-1 text-xs text-muted">{d.message || "-"}</p>
               <p className="mt-2 text-[10px] uppercase tracking-wide text-muted-2">
                 {d.status} · {new Date(d.createdAt).toLocaleString()}
               </p>

@@ -5,7 +5,7 @@ export const site = {
   headline:
     "I build intelligent software systems and the engineering foundations that keep them reliable.",
   tagline:
-    "Full-stack products, APIs, and AI systems you can reason about — from TypeScript and Python backends to RAG, evaluation, and infrastructure that holds up under real use.",
+    "Full-stack products, APIs, and AI systems you can reason about - from TypeScript and Python backends to RAG, evaluation, and infrastructure that holds up under real use.",
   email: "olanikegloria2020@gmail.com",
   linkedin: "https://www.linkedin.com/in/olani",
   github: "https://github.com/olanikegloria",
@@ -23,15 +23,15 @@ export const stats = [
 
 export const about = {
   intro:
-    "I'm a software engineer building toward AI engineering roles — comfortable shipping full-stack products and increasingly focused on systems where models sit on top of solid data, APIs, and infrastructure.",
+    "I'm a software engineer building toward AI engineering roles - comfortable shipping full-stack products and increasingly focused on systems where models sit on top of solid data, APIs, and infrastructure.",
   extended:
-    "I've built production web apps with React, Next.js, Node, and databases, and I've designed AI-assisted pipelines that connect LLMs to real workflows. I'm deepening systems thinking: CI intelligence, developer environments, architecture analysis, RAG with citations, and API change impact — not demos for their own sake.",
+    "I've built production web apps with React, Next.js, Node, and databases, and I've designed AI-assisted pipelines that connect LLMs to real workflows. I'm deepening systems thinking: CI intelligence, developer environments, architecture analysis, RAG with citations, and API change impact - not demos for their own sake.",
   motivation:
-    "I care about useful technology. The interesting problems aren't just generating text — they're grounding answers in evidence, making failures explainable, and building tools engineers actually trust.",
+    "I care about useful technology. The interesting problems aren't just generating text - they're grounding answers in evidence, making failures explainable, and building tools engineers actually trust.",
   approach:
     "Start from the problem and the data. Prefer deterministic foundations, then add AI where explanation or retrieval clearly helps. Document trade-offs. If it fails quietly, it isn't done.",
   goals:
-    "I'm preparing for software, full-stack, platform, and AI engineering roles — including graduate and co-op paths — and building a body of work that shows I can talk about architecture, security, and scale with honesty.",
+    "I'm preparing for software, full-stack, platform, and AI engineering roles - including graduate and co-op paths - and building a body of work that shows I can talk about architecture, security, and scale with honesty.",
 } as const;
 
 export const strengths = [
@@ -60,7 +60,7 @@ export const education = [
     school: "Continued study",
     degree: "AI engineering & applied ML foundations",
     detail:
-      "Deep learning, feature engineering, ML coursework, Oracle AI vector search — plus hands-on RAG and evaluation projects",
+      "Deep learning, feature engineering, ML coursework, Oracle AI vector search - plus hands-on RAG and evaluation projects",
     period: "2025 to present",
   },
 ] as const;
@@ -120,7 +120,7 @@ export const experience = [
     period: "Sep 2024 to Jun 2026",
     location: "Lagos, Nigeria",
     description:
-      "Software development for business and operations systems — including Odoo modules, database migrations, and workflow tooling that replaces manual back-office processes.",
+      "Software development for business and operations systems - including Odoo modules, database migrations, and workflow tooling that replaces manual back-office processes.",
   },
   {
     company: "Creative Builders",

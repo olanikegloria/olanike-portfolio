@@ -145,7 +145,7 @@ export function DrawingCanvas({
     try {
       const dataUrl = canvas.toDataURL("image/png");
       await onSubmit(dataUrl, name, message);
-      setStatus("Submitted for review — thank you.");
+      setStatus("Submitted for review - thank you.");
       clearCanvas();
       setMessage("");
     } catch (err) {

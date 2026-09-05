@@ -6,9 +6,9 @@ import { ArrowUpRight } from "lucide-react";
 import { getProjectsByCategory, type ProjectCategory } from "@/data/projects";
 
 const GROUPS: { key: ProjectCategory; label: string }[] = [
-  { key: "ai", label: "AI & Intelligent Systems" },
-  { key: "software", label: "Software Engineering" },
-  { key: "infra", label: "Infrastructure & Developer Tools" },
+  { key: "ai", label: "AI & Automation" },
+  { key: "devops", label: "DevOps & Platform (with AI)" },
+  { key: "software", label: "Frontend & Full-Stack" },
 ];
 
 export function Projects() {
