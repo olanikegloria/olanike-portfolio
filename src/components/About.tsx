@@ -12,7 +12,7 @@ export function About() {
       <div className="mx-auto max-w-5xl">
         <p className="section-label">01 / About</p>
         <h2 className="font-display mt-3 text-3xl text-fg md:text-[2.5rem]">
-          Engineer, automator, problem solver
+          Engineer, systems thinker, builder
         </h2>
         <span className="accent-line" />
 

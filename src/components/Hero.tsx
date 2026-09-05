@@ -8,13 +8,16 @@ export function Hero() {
     <section className="relative px-5 pt-28 pb-20 md:px-8 md:pt-36 md:pb-28">
       <div className="mx-auto max-w-5xl">
         <div className="max-w-3xl">
-          <p className="section-label">{site.role}</p>
+          <p className="font-display text-[clamp(2.75rem,7vw,4.25rem)] leading-[1.05] text-fg">
+            {site.name}
+          </p>
+          <p className="section-label mt-4">{site.role}</p>
 
-          <h1 className="font-display mt-5 text-[clamp(2.5rem,6.5vw,4rem)] leading-[1.12] text-fg">
+          <h1 className="mt-6 max-w-2xl text-[clamp(1.25rem,2.8vw,1.65rem)] font-medium leading-snug text-body">
             {site.headline}
           </h1>
 
-          <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-muted">
+          <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-muted">
             {site.tagline}
           </p>
 

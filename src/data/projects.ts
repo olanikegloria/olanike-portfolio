@@ -1,4 +1,4 @@
-export type ProjectCategory = "automation" | "software";
+export type ProjectCategory = "ai" | "software" | "infra";
 
 export type ProjectLink = {
   label: string;
@@ -29,7 +29,7 @@ export const projects: Project[] = [
   {
     slug: "proposal-generator",
     title: "AI-Powered Proposal Automation System",
-    category: "automation",
+    category: "ai",
     year: "2025",
     thumbnail: "/projects/proposal.png",
     images: ["/projects/proposal.png"],
@@ -64,7 +64,7 @@ export const projects: Project[] = [
   {
     slug: "content-generation",
     title: "AI-Powered Content Generation & Publishing System",
-    category: "automation",
+    category: "ai",
     year: "2025",
     thumbnail: "/projects/fetemi.png",
     images: ["/projects/fetemi.png"],
@@ -100,7 +100,7 @@ export const projects: Project[] = [
   {
     slug: "lead-generation",
     title: "AI-Powered Lead Generation System",
-    category: "automation",
+    category: "ai",
     year: "2025",
     thumbnail: "/projects/lead-gen-detail.png",
     images: ["/projects/lead-gen-detail.png"],
@@ -137,7 +137,7 @@ export const projects: Project[] = [
   {
     slug: "invoice-processing",
     title: "AI-Powered Invoice Inbox System",
-    category: "automation",
+    category: "ai",
     year: "2025",
     thumbnail: "/projects/invoice.png",
     images: ["/projects/invoice.png"],
@@ -172,7 +172,7 @@ export const projects: Project[] = [
   {
     slug: "kpi-reporting",
     title: "Reporting & Dashboard Automation",
-    category: "automation",
+    category: "ai",
     year: "2025",
     thumbnail: "/projects/kpi.png",
     images: ["/projects/kpi.png"],
@@ -208,7 +208,7 @@ export const projects: Project[] = [
   {
     slug: "voice-support-agent",
     title: "Voice-Based Customer Support Agent",
-    category: "automation",
+    category: "ai",
     year: "2025",
     thumbnail: "/projects/vapi.png",
     images: ["/projects/vapi.png"],
@@ -381,6 +381,151 @@ export const projects: Project[] = [
       {
         label: "Portfolio",
         href: "https://olanikeolatunji.com.ng/projects",
+      },
+    ],
+  },
+  {
+    slug: "ci-intelligence-platform",
+    title: "CI Intelligence Platform",
+    category: "infra",
+    year: "2026",
+    thumbnail: "/projects/kpi.png",
+    images: ["/projects/kpi.png"],
+    shortDescription:
+      "Why did CI fail — and will it happen again? Failure causality, clustering, and flaky-test intelligence over GitHub Actions.",
+    overview:
+      "A platform that ingests GitHub Actions runs and explains pipeline failures with deterministic analysis plus AI summaries.",
+    problem:
+      "CI dashboards show red/green but rarely explain causality, recurrence, or flakiness.",
+    solution:
+      "Ingest workflow data, fingerprint failures, cluster similar breaks, score flaky tests, and use AI only to narrate evidence.",
+    tools: [
+      "Next.js",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "GitHub Actions",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/olanikegloria/ci-intelligence-platform",
+      },
+    ],
+  },
+  {
+    slug: "dev-environment-platform",
+    title: "One-Click Dev Environment Platform",
+    category: "infra",
+    year: "2026",
+    thumbnail: "/projects/starlink/cover.png",
+    images: ["/projects/starlink/cover.png"],
+    shortDescription:
+      "Analyse a repo, detect what it needs to run, and provision an isolated development environment.",
+    overview:
+      "Developer onboarding platform focused on clone → configure → run — not production deploy.",
+    problem:
+      "New engineers waste hours wiring env vars, databases, and sidecars even when Dockerfiles exist.",
+    solution:
+      "Repository analysis plus Docker-based provisioning, with AI explaining startup and config failures.",
+    tools: ["Next.js", "TypeScript", "Docker", "PostgreSQL"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/olanikegloria/dev-environment-platform",
+      },
+    ],
+  },
+  {
+    slug: "architecture-explorer",
+    title: "Architecture Explorer",
+    category: "software",
+    year: "2026",
+    thumbnail: "/projects/academic-connect/cover.png",
+    images: ["/projects/academic-connect/cover.png"],
+    shortDescription:
+      "Google Maps for a codebase — dependency graphs and grounded AI answers with file citations.",
+    overview:
+      "Static analysis builds a map of the system; Q&A is constrained to the indexed graph.",
+    problem:
+      "Large codebases are hard to understand; ungrounded LLM answers invent architecture.",
+    solution:
+      "AST/import graphs, interactive visualisation, and citation-required AI answers with refusal when evidence is thin.",
+    tools: ["Next.js", "TypeScript", "Python", "PostgreSQL"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/olanikegloria/architecture-explorer",
+      },
+    ],
+  },
+  {
+    slug: "production-replay-platform",
+    title: "Production Replay Platform",
+    category: "infra",
+    year: "2026",
+    thumbnail: "/projects/invoice.png",
+    images: ["/projects/invoice.png"],
+    shortDescription:
+      "Capture redacted incident context and recreate safe local conditions to reproduce production failures.",
+    overview:
+      "Incident packs with mandatory redaction and Dockerised replay scaffolds — not a full traffic mirror.",
+    problem:
+      "It worked locally. Production failures are hard to reproduce without leaking secrets.",
+    solution:
+      "Collector SDK, redaction pipeline, incident store, safe replay, and evidence-bound AI briefs.",
+    tools: ["FastAPI", "Docker", "PostgreSQL", "Next.js"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/olanikegloria/production-replay-platform",
+      },
+    ],
+  },
+  {
+    slug: "ai-engineering-knowledge-platform",
+    title: "AI Engineering Knowledge Platform",
+    category: "ai",
+    year: "2026",
+    thumbnail: "/projects/vapi.png",
+    images: ["/projects/vapi.png"],
+    shortDescription:
+      "Private engineering knowledge RAG with citations, confidence, and explicit no-answer behaviour.",
+    overview:
+      "Ingest docs and repos, retrieve with embeddings, answer only with sources — plus an evaluation harness.",
+    problem:
+      "Engineering knowledge is scattered; chatbots invent procedures that were never written down.",
+    solution:
+      "Chunking, embeddings, retrieval, citation-required generation, refusal policy, and measurable eval.",
+    tools: ["FastAPI", "pgvector", "Next.js", "Ollama"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/olanikegloria/ai-engineering-knowledge-platform",
+      },
+    ],
+  },
+  {
+    slug: "api-change-intelligence",
+    title: "API Change Intelligence",
+    category: "software",
+    year: "2026",
+    thumbnail: "/projects/lead-gen.png",
+    images: ["/projects/lead-gen.png"],
+    shortDescription:
+      "Detect breaking API changes and estimate which downstream consumers may break.",
+    overview:
+      "OpenAPI diff plus consumer reference scanning with human-readable AI summaries.",
+    problem:
+      "One team changes an API; another service breaks without warning.",
+    solution:
+      "Schema diff engine, consumer blast-radius scan, PR risk reports, AI explanation of changes.",
+    tools: ["Next.js", "TypeScript", "PostgreSQL", "OpenAPI"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/olanikegloria/api-change-intelligence",
       },
     ],
   },

@@ -1,10 +1,11 @@
 export const site = {
   name: "Olanike Olatunji",
   shortName: "Olanike",
-  role: "AI Automation & Software Engineering",
-  headline: "I build workflows and software that give teams their time back.",
+  role: "AI Engineer & Software Engineer",
+  headline:
+    "I build intelligent software systems and the engineering foundations that keep them reliable.",
   tagline:
-    "From n8n pipelines to full-stack apps. I design systems that replace manual processes with logic that actually holds up in production.",
+    "Full-stack products, APIs, and AI systems you can reason about — from TypeScript and Python backends to RAG, evaluation, and infrastructure that holds up under real use.",
   email: "olanikegloria2020@gmail.com",
   linkedin: "https://www.linkedin.com/in/olani",
   github: "https://github.com/olanikegloria",
@@ -15,31 +16,31 @@ export const site = {
 } as const;
 
 export const stats = [
-  { value: "10", label: "Projects shipped" },
+  { value: "10+", label: "Projects shipped" },
   { value: "4+", label: "Years in software" },
-  { value: "90%", label: "Avg. time saved" },
+  { value: "6", label: "Systems in progress" },
 ] as const;
 
 export const about = {
   intro:
-    "I'm an AI Engineer and Automation Architect. I design intelligent systems that streamline repetitive business processes, combining machine learning, workflow automation, and solid engineering to build things that run reliably.",
+    "I'm a software engineer building toward AI engineering roles — comfortable shipping full-stack products and increasingly focused on systems where models sit on top of solid data, APIs, and infrastructure.",
   extended:
-    "My work spans AI-powered lead generation, proposal automation, content pipelines, and full-stack products like Skinauth and ShopTKstore. I'm comfortable in n8n, Make.com, and Airtable on the automation side, and React, Next.js, Express, and Supabase when a product needs a real interface or API behind it.",
+    "I've built production web apps with React, Next.js, Node, and databases, and I've designed AI-assisted pipelines that connect LLMs to real workflows. I'm deepening systems thinking: CI intelligence, developer environments, architecture analysis, RAG with citations, and API change impact — not demos for their own sake.",
   motivation:
-    "I started automating because I kept watching capable people do the same tasks every week. The work wasn't hard. It was just never designed to run without a human in the loop. That's the gap I like closing.",
+    "I care about useful technology. The interesting problems aren't just generating text — they're grounding answers in evidence, making failures explainable, and building tools engineers actually trust.",
   approach:
-    "Map the process first. Build on copies, not production. Document what breaks. If it fails quietly or needs babysitting at 2am, it isn't done yet.",
+    "Start from the problem and the data. Prefer deterministic foundations, then add AI where explanation or retrieval clearly helps. Document trade-offs. If it fails quietly, it isn't done.",
   goals:
-    "Roles where I can ship AI automation and software engineering work together: agentic workflows, LLM tooling, and the infrastructure that keeps it all running.",
+    "I'm preparing for software, full-stack, platform, and AI engineering roles — including graduate and co-op paths — and building a body of work that shows I can talk about architecture, security, and scale with honesty.",
 } as const;
 
 export const strengths = [
-  "Workflow automation (n8n, Make)",
-  "AI / LLM integration",
-  "Full-stack development",
-  "ERP & Odoo systems",
-  "Process design",
-  "API & data pipelines",
+  "Full-stack development (React, Next.js, TypeScript)",
+  "Backend APIs & databases",
+  "AI / LLM integration & RAG",
+  "Python & data pipelines",
+  "Docker, CI/CD & developer tooling",
+  "System design & process clarity",
 ] as const;
 
 export const education = [
@@ -54,6 +55,13 @@ export const education = [
     degree: "Computer Software Engineering",
     detail: "Full-stack program · 789+ hours",
     period: "2023 to 2024",
+  },
+  {
+    school: "Continued study",
+    degree: "AI engineering & applied ML foundations",
+    detail:
+      "Deep learning, feature engineering, ML coursework, Oracle AI vector search — plus hands-on RAG and evaluation projects",
+    period: "2025 to present",
   },
 ] as const;
 
@@ -99,6 +107,7 @@ export const certifications = [
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Work", href: "#projects" },
+  { label: "Art", href: "#visitor-art" },
   { label: "Stack", href: "#stack" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
@@ -111,7 +120,7 @@ export const experience = [
     period: "Sep 2024 to Jun 2026",
     location: "Lagos, Nigeria",
     description:
-      "Business and operations automation for clients. Odoo module development, database migrations, and workflow systems that replace manual back-office processes.",
+      "Software development for business and operations systems — including Odoo modules, database migrations, and workflow tooling that replaces manual back-office processes.",
   },
   {
     company: "Creative Builders",

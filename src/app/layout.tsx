@@ -18,10 +18,10 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: `${site.name} | AI Automation & Software Engineer`,
+  title: `${site.name} | AI Engineer & Software Engineer`,
   description: site.tagline,
   openGraph: {
-    title: `${site.name} | AI Automation & Software Engineer`,
+    title: `${site.name} | AI Engineer & Software Engineer`,
     description: site.tagline,
     type: "website",
   },

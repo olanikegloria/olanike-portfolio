@@ -31,14 +31,14 @@ export function Contact() {
       <div className="mx-auto max-w-5xl">
         <div className="grid gap-14 lg:grid-cols-2">
           <div>
-            <p className="section-label">06 / Contact</p>
+            <p className="section-label">07 / Contact</p>
             <h2 className="font-display mt-3 text-3xl text-fg md:text-[2.5rem]">
-              Got a workflow that&apos;s eating your team&apos;s week?
+              Building something serious — or hiring for it?
             </h2>
             <span className="accent-line" />
             <p className="mt-5 text-sm leading-relaxed text-muted">
-              Open to automation projects, software engineering roles, and
-              consulting. Drop a message or reach out directly.
+              Open to software engineering, full-stack, platform, and AI
+              engineering roles. Drop a message or reach out directly.
             </p>
 
             <div className="mt-8 space-y-3">
@@ -109,7 +109,7 @@ export function Contact() {
                 required
                 rows={5}
                 className="input-field w-full resize-none px-3.5 py-3 text-sm"
-                placeholder="What are you looking to build or automate?"
+                placeholder="What are you working on — or hiring for?"
               />
             </div>
             <button

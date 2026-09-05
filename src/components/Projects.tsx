@@ -3,11 +3,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { getProjectsByCategory } from "@/data/projects";
+import { getProjectsByCategory, type ProjectCategory } from "@/data/projects";
+
+const GROUPS: { key: ProjectCategory; label: string }[] = [
+  { key: "ai", label: "AI & Intelligent Systems" },
+  { key: "software", label: "Software Engineering" },
+  { key: "infra", label: "Infrastructure & Developer Tools" },
+];
 
 export function Projects() {
-  const automation = getProjectsByCategory("automation");
-  const software = getProjectsByCategory("software");
+  let startIndex = 0;
 
   return (
     <section
@@ -21,16 +26,20 @@ export function Projects() {
         </h2>
         <span className="accent-line" />
 
-        <ProjectGroup
-          label="Automation"
-          projects={automation}
-          startIndex={0}
-        />
-        <ProjectGroup
-          label="Software development"
-          projects={software}
-          startIndex={automation.length}
-        />
+        {GROUPS.map((group) => {
+          const projects = getProjectsByCategory(group.key);
+          const groupStart = startIndex;
+          startIndex += projects.length;
+          if (projects.length === 0) return null;
+          return (
+            <ProjectGroup
+              key={group.key}
+              label={group.label}
+              projects={projects}
+              startIndex={groupStart}
+            />
+          );
+        })}
       </div>
     </section>
   );
@@ -82,7 +91,10 @@ function ProjectGroup({
 
               <div className="mt-4 flex flex-wrap gap-1.5">
                 {project.tools.slice(0, 6).map((tag) => (
-                  <span key={tag} className="tag px-2 py-0.5 text-[10px] tracking-wide uppercase">
+                  <span
+                    key={tag}
+                    className="tag px-2 py-0.5 text-[10px] tracking-wide uppercase"
+                  >
                     {tag}
                   </span>
                 ))}
