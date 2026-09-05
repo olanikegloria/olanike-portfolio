@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { navLinks, site } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
+import { useRecruiterMode } from "@/components/RecruiterProvider";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { toggle: toggleRecruiter } = useRecruiterMode();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -41,11 +43,19 @@ export function Header() {
               {link.label}
             </a>
           ))}
+          <button
+            type="button"
+            onClick={toggleRecruiter}
+            className="btn-secondary ml-1 px-3.5 py-1.5 text-[13px]"
+            title="Press R"
+          >
+            Recruiter
+          </button>
           <a
             href={site.cvUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary ml-1 px-3.5 py-1.5 text-[13px]"
+            className="btn-primary ml-1 px-3.5 py-1.5 text-[13px]"
           >
             Resume
           </a>
@@ -91,6 +101,16 @@ export function Header() {
                 {link.label}
               </a>
             ))}
+            <button
+              type="button"
+              onClick={() => {
+                setMenuOpen(false);
+                toggleRecruiter();
+              }}
+              className="btn-secondary w-fit px-3.5 py-1.5 text-sm"
+            >
+              Recruiter mode
+            </button>
           </div>
         </nav>
       )}

@@ -107,9 +107,9 @@ export const certifications = [
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Work", href: "#projects" },
-  { label: "Art", href: "#visitor-art" },
-  { label: "Stack", href: "#stack" },
-  { label: "Experience", href: "#experience" },
+  { label: "Systems", href: "#systems" },
+  { label: "Wall", href: "#visitor-art" },
+  { label: "Terminal", href: "#terminal" },
   { label: "Contact", href: "#contact" },
 ] as const;
 

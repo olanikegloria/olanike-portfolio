@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { RecruiterProvider } from "@/components/RecruiterProvider";
+import { RecruiterPanel } from "@/components/RecruiterPanel";
 import { site } from "@/data/portfolio";
 import "./globals.css";
 
@@ -43,9 +45,12 @@ export default function RootLayout({
       className={`${dmSerif.variable} ${dmSans.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-page font-sans text-fg antialiased">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <RecruiterProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <RecruiterPanel />
+        </RecruiterProvider>
       </body>
     </html>
   );
